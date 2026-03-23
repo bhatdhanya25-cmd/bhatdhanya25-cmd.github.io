@@ -5,12 +5,75 @@
 
 <style>
 body {
-    font-family: Arial;
-    margin: 40px;
+    font-family: 'Segoe UI', Arial;
+    margin: 0;
+    background-color: #f4f6f8;
 }
 
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #8b0000, #c0392b);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* HEADINGS */
 h1 {
-    color: darkred;
+    margin: 0;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+/* CARDS */
+.card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #c0392b;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #c0392b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: #922b21;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #2c3e50;
+    color: white;
 }
 </style>
 
@@ -18,40 +81,49 @@ h1 {
 
 <body>
 
-<h1>Blood Donation Management System</h1>
+<header>
+    <h1>Blood Donation Management System</h1>
+    <p>Helping save lives through technology </p>
+</header>
 
-<h2>Overview</h2>
+<div class="container">
+
+<h2>📌 Overview</h2>
 <p>
-This project is a web-based application to manage blood donor records.
-Users can register donors, filter by city and blood group, and manage donor data.
+This project is a web-based application designed to manage blood donor records.
+It allows users to register donors, filter by city and blood group, and efficiently manage donor data.
 </p>
 
-<h2>Features</h2>
-<ul>
-<li>Donor registration</li>
-<li>Age validation (18+)</li>
-<li>Search by city</li>
-<li>Filter by blood group</li>
-<li>Dynamic donor list</li>
-<li>Remove donor</li>
-</ul>
+<h2>✨ Features</h2>
 
-<h2>Technologies Used</h2>
+<div class="card">Donor registration with validation</div>
+<div class="card">Age restriction (18+)</div>
+<div class="card">Search by city</div>
+<div class="card">Filter by blood group</div>
+<div class="card">Dynamic donor list</div>
+<div class="card">Remove donor functionality</div>
+
+<h2>🛠 Technologies Used</h2>
 <ul>
 <li>HTML, CSS</li>
 <li>AngularJS</li>
-<li>PHP (for backend)</li>
+<li>PHP</li>
 <li>XML</li>
 </ul>
 
-<h2>My Contribution</h2>
+<h2>👨‍💻 My Contribution</h2>
 <p>
-Designed and developed the full system including frontend UI, validation logic,
-and backend data integration.
+Designed and developed the complete system including UI, validation logic,
+and backend integration using XML and PHP.
 </p>
 
-<br>
-<a href="index.html">⬅ Back to Home</a>
+<a href="index.html" class="button">⬅ Back to Home</a>
+
+</div>
+
+<footer>
+    <p>  Dhanya | Portfolio Project</p>
+</footer>
 
 </body>
 </html>
