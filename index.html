@@ -20,10 +20,6 @@ body {
     padding: 15px 40px;
 }
 
-.navbar h2 {
-    margin: 0;
-}
-
 .navbar a {
     color: white;
     margin-left: 20px;
@@ -31,26 +27,23 @@ body {
     font-weight: bold;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-/* HEADER */
-header {
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px;
     background: linear-gradient(90deg, #2c3e50, #4ca1af);
     color: white;
-    padding: 50px;
-    text-align: center;
+    animation: fadeIn 1.5s ease;
 }
 
-header h1 {
+.hero h1 {
+    font-size: 45px;
     margin: 0;
-    font-size: 42px;
 }
 
-header p {
-    margin-top: 10px;
+.hero p {
     font-size: 18px;
+    margin-top: 10px;
 }
 
 /* CONTAINER */
@@ -60,27 +53,39 @@ header p {
     padding: 20px;
 }
 
-/* ABOUT */
-.about {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* ANIMATION */
+.fade {
+    animation: fadeUp 1s ease;
 }
 
-/* PROJECT CARDS */
-.project {
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+/* CARDS */
+.card {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
-.project:hover {
-    transform: scale(1.02);
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* BUTTON */
@@ -92,31 +97,32 @@ header p {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
 }
 
 .button:hover {
     background: #2c80b4;
 }
 
-/* CONTACT */
-.contact {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* CLICKABLE LINKS */
+.skill {
+    background: #3498db;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* CONTACT */
 .contact a {
     color: #3498db;
     text-decoration: none;
     font-weight: bold;
-}
-
-.contact a:hover {
-    text-decoration: underline;
 }
 
 /* FOOTER */
@@ -125,7 +131,6 @@ footer {
     padding: 20px;
     background: #2c3e50;
     color: white;
-    margin-top: 40px;
 }
 </style>
 
@@ -143,71 +148,87 @@ footer {
     </div>
 </div>
 
-<!-- HEADER -->
-<header>
+<!-- HERO -->
+<div class="hero">
     <h1>Dhanya</h1>
-    <p>Web Developer | Data Dashboard Creator</p>
-</header>
+    <p>Web Developer | Data Analyst | Dashboard Creator</p>
+</div>
 
 <div class="container">
 
 <!-- ABOUT -->
-<div class="about" id="about">
+<div class="card fade" id="about">
     <h2>About Me</h2>
     <p>
-        I build web applications and business dashboards to solve real-world problems.
-        Passionate about creating efficient and user-friendly solutions.
+        I build web applications and data dashboards to solve real-world business problems.
+        I enjoy turning data into insights and creating efficient systems.
     </p>
 </div>
 
+<!-- SKILLS -->
+<div class="card fade">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Power BI</div>
+        <div class="skill">Excel</div>
+        <div class="skill">Zoho Creator</div>
+        <div class="skill">Deluge</div>
+        <div class="skill">Data Analysis</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+    </div>
+</div>
+
 <!-- PROJECTS -->
-<h2 id="projects">Projects</h2>
+<div class="fade" id="projects">
+    <h2>Projects</h2>
 
-<div class="project">
-    <h3>1. Business Operations KPI Dashboard</h3>
-    <p>KPI tracking and workflow automation using Zoho Creator.</p>
-    <a href="zoho_creator.html" class="button">View Details</a>
-</div>
+    <div class="card">
+        <h3>Business Operations KPI Dashboard</h3>
+        <p>Zoho Creator app for managing tasks and employee productivity.</p>
+        <a href="zoho_creator.html" class="button">View Details</a>
+    </div>
 
-<div class="project">
-    <h3>2. Blood Management System</h3>
-    <p>Web app for managing blood donor records with search, filter and validation.</p>
-    <a href="blood_donation.html" class="button">View Details</a>
-</div>
+    <div class="card">
+        <h3>Blood Management System</h3>
+        <p>Web app for managing blood donors with filtering and validation.</p>
+        <a href="blood_donation.html" class="button">View Details</a>
+    </div>
 
-<div class="project">
-    <h3>3. Delivery Performance Dashboard</h3>
-    <p>Dashboard analyzing delivery efficiency and performance.</p>
-    <a href="delivery_dashboard.html" class="button">View Details</a>
+    <div class="card">
+        <h3>Delivery Performance Analysis</h3>
+        <p>Power BI dashboard analyzing delivery efficiency and delays.</p>
+        <a href="delivery_dashboard.html" class="button">View Details</a>
+    </div>
+
 </div>
 
 <!-- CONTACT -->
-<div class="contact" id="contact">
+<div class="card contact fade" id="contact">
     <h2>Contact</h2>
 
     <p>Email: 
-        <a href="bhatdhanya25@gmail.com">
-            bhatdhanya25@email.com
+        <a href="bhatdhanyakm25@gmail.com">
+            dhanya@email.com
         </a>
     </p>
 
     <p>GitHub: 
-        <a href=":https://bhatdhanya25-cmd.github.io/" target="_blank">
-            bhatdhanya25-cmd.github.io/
+        <a href="https://bhatdhanya25-cmd.github.io/" target="_blank">
+            github.com/Dhanya K M
         </a>
     </p>
 
     <p>LinkedIn: 
-        <a href=" https://www.linkedin.com/in/dhanya-k-m-722a37332" target="_blank">
-            linkedin.com/in/dhanya-k-m-722a37332
+        <a href="https://www.linkedin.com/in/dhanya-k-m-722a37332" target="_blank">
+            linkedin.com/in/dhanya
         </a>
     </p>
-
 </div>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2026 Dhanya | Portfolio</p>
 </footer>
