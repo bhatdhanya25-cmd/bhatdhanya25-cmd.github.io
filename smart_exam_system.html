@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Exam System</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            background: #1f2d3d;
+            color: white;
+            padding: 18px 40px;
+        }
+
+        .navbar h2{
+            font-size: 24px;
+        }
+
+        /* HERO */
+
+        .hero{
+            background: linear-gradient(135deg, #1f2d3d, #4ca1af);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1{
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p{
+            font-size: 20px;
+        }
+
+        /* CONTAINER */
+
+        .container{
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* CARD */
+
+        .card{
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h2{
+            margin-bottom: 15px;
+            color: #1f2d3d;
+        }
+
+        .card ul{
+            padding-left: 20px;
+        }
+
+        .card li{
+            margin-bottom: 10px;
+        }
+
+        /* IMAGE */
+
+        .project-image{
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* BUTTON */
+
+        .button{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .button:hover{
+            background: #217dbb;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background: #1f2d3d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 768px){
+
+            .hero h1{
+                font-size: 36px;
+            }
+
+            .hero p{
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+        <h2>Dhanya</h2>
+    </div>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h1>Smart Exam System</h1>
+
+        <p>
+            Backend-driven academic management system using PostgreSQL, SQL, Python, and FastAPI.
+        </p>
+
+    </section>
+
+    <!-- MAIN CONTAINER -->
+
+    <div class="container">
+
+        <!-- OVERVIEW -->
+
+        <div class="card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                Smart Exam System is a backend-focused academic management system developed to manage students, teachers, departments, exams, and rankings efficiently. The project integrates PostgreSQL with FastAPI APIs to retrieve and manage real-time academic data.
+            </p>
+
+        </div>
+
+        <!-- TECHNOLOGIES -->
+
+        <div class="card">
+
+            <h2>Technologies Used</h2>
+
+            <ul>
+                <li>PostgreSQL</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>psycopg2</li>
+                <li>Git & GitHub</li>
+            </ul>
+
+        </div>
+
+        <!-- FEATURES -->
+
+        <div class="card">
+
+            <h2>Key Features</h2>
+
+            <ul>
+                <li>Student and Teacher Management</li>
+                <li>Department and Subject Tracking</li>
+                <li>Exam and Result Management</li>
+                <li>REST API Development using FastAPI</li>
+                <li>Topper Ranking System using SQL Window Functions</li>
+                <li>PostgreSQL Database Integration</li>
+                <li>Swagger API Documentation</li>
+                <li>JSON-based API Responses</li>
+            </ul>
+
+        </div>
+
+        <!-- DATABASE DESIGN -->
+
+        <div class="card">
+
+            <h2>Database Design</h2>
+
+            <p>
+                Designed a normalized relational database schema with primary keys, foreign keys, constraints, and entity relationships for efficient academic data management.
+            </p>
+
+            <ul>
+                <li>users</li>
+                <li>departments</li>
+                <li>students</li>
+                <li>teachers</li>
+                <li>subjects</li>
+                <li>exams</li>
+                <li>student_exam_attempts</li>
+            </ul>
+
+            <!-- ADD ER DIAGRAM IMAGE -->
+
+            <img src="er_diagram.png" alt="ER Diagram" class="project-image">
+
+        </div>
+
+        <!-- SQL SECTION -->
+
+        <div class="card">
+
+            <h2>SQL Concepts Implemented</h2>
+
+            <p>
+                Implemented advanced SQL concepts including JOIN queries, aggregate analysis, ranking queries, and SQL window functions.
+            </p>
+
+            <ul>
+                <li>JOIN Queries</li>
+                <li>Aggregate Functions</li>
+                <li>Ranking Queries</li>
+                <li>DENSE_RANK() Window Function</li>
+                <li>Views and Reporting Queries</li>
+            </ul>
+
+        </div>
+
+        <!-- API SECTION -->
+
+        <div class="card">
+
+            <h2>REST API Endpoints</h2>
+
+            <ul>
+                <li>/students</li>
+                <li>/results</li>
+                <li>/topper</li>
+            </ul>
+
+            <p>
+                APIs dynamically retrieve and return PostgreSQL database data in structured JSON format.
+            </p>
+
+        </div>
+
+        <!-- SWAGGER -->
+
+        <div class="card">
+
+            <h2>Swagger API Documentation</h2>
+
+            <p>
+                FastAPI automatically generated interactive Swagger documentation for testing and validating REST APIs.
+            </p>
+
+            <!-- ADD SWAGGER SCREENSHOT -->
+
+            <img src="swagger_docs.png" alt="Swagger Documentation" class="project-image">
+
+        </div>
+
+        <!-- POSTGRESQL -->
+
+        <div class="card">
+
+            <h2>PostgreSQL Integration</h2>
+
+            <p>
+                Integrated PostgreSQL with FastAPI using psycopg2 to dynamically retrieve academic records and serve real-time API responses.
+            </p>
+
+            <p>
+                The system converts raw query outputs into professional JSON-formatted API responses for frontend and reporting integration.
+            </p>
+
+        </div>
+
+        <!-- GITHUB -->
+
+        <div class="card">
+
+            <h2>Version Control & GitHub</h2>
+
+            <p>
+                Managed project version control using Git and GitHub including repository setup, commits, push workflows, and structured project organization.
+            </p>
+
+        </div>
+
+        <!-- BACK BUTTON -->
+
+        <a href="index.html" class="button">
+            ← Back to Portfolio
+        </a>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Dhanya | Smart Exam System
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
